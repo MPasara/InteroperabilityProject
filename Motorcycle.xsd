@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MotoApi.Models" xmlns:m="http://schemas.datacontract.org/2004/07/MotoApi.Models">
+  <xs:element name="ArrayOfMotorcycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="m:Motorcycle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Motorcycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="m:Make"/>
+        <xs:element ref="m:Name"/>
+        <xs:element ref="m:Type"/>
+        <xs:element ref="m:Power"/>
+        <xs:element ref="m:Weight"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Make" type="xs:NCName"/>
+  <xs:element name="Name" type="xs:NCName"/>
+  <xs:element name="Type" type="xs:string"/>
+  <xs:element name="Power" type="xs:integer"/>
+  <xs:element name="Weight" type="xs:integer"/>
+</xs:schema>

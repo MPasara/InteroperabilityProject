@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified">
+      <s:element name="GetAllMotorcycles">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllMotorcyclesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMotorcyclesResult" type="ArrayOfMotorcycle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMotorcycle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Motorcycle" nillable="true" type="Motorcycle" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Motorcycle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Power" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMotorcycleByMake">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="make" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMotorcycleByMakeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMotorcycleByMakeResult" type="Motorcycle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllMotorcyclesSoapIn">
+    <wsdl:part name="parameters" element="GetAllMotorcycles" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMotorcyclesSoapOut">
+    <wsdl:part name="parameters" element="GetAllMotorcyclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMotorcycleByMakeSoapIn">
+    <wsdl:part name="parameters" element="GetMotorcycleByMake" />
+  </wsdl:message>
+  <wsdl:message name="GetMotorcycleByMakeSoapOut">
+    <wsdl:part name="parameters" element="GetMotorcycleByMakeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MotoService1Soap">
+    <wsdl:operation name="GetAllMotorcycles">
+      <wsdl:input message="GetAllMotorcyclesSoapIn" />
+      <wsdl:output message="GetAllMotorcyclesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotorcycleByMake">
+      <wsdl:input message="GetMotorcycleByMakeSoapIn" />
+      <wsdl:output message="GetMotorcycleByMakeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MotoService1Soap" type="MotoService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllMotorcycles">
+      <soap:operation soapAction="/GetAllMotorcycles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotorcycleByMake">
+      <soap:operation soapAction="/GetMotorcycleByMake" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MotoService1Soap12" type="MotoService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllMotorcycles">
+      <soap12:operation soapAction="/GetAllMotorcycles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotorcycleByMake">
+      <soap12:operation soapAction="/GetMotorcycleByMake" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MotoService1">
+    <wsdl:port name="MotoService1Soap" binding="MotoService1Soap">
+      <soap:address location="http://localhost:51796/MotoService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MotoService1Soap12" binding="MotoService1Soap12">
+      <soap12:address location="http://localhost:51796/MotoService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

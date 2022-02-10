@@ -1,0 +1,19 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ArrayOfMotorcycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Motorcycle" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Make"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="Type"/>
+              <xs:element type="xs:short" name="Power"/>
+              <xs:element type="xs:short" name="Weight"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

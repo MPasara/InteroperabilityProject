@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMotorcycle
+    xmlns="http://schemas.datacontract.org/2004/07/MotoApi.Models">
+    <Motorcycle>
+        <Make>Harley Davidson</Make>
+        <Name>Iron 883</Name>
+        <Type>Sportster</Type>
+        <Power>883</Power>
+        <Weight>256</Weight>
+    </Motorcycle>
+</ArrayOfMotorcycle>

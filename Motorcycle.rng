@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://schemas.datacontract.org/2004/07/MotoApi.Models" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="ArrayOfMotorcycle">
+      <element name="Motorcycle">
+        <element name="Make">
+          <text/>
+        </element>
+        <element name="Name">
+          <text/>
+        </element>
+        <element name="Type">
+          <data type="NCName"/>
+        </element>
+        <element name="Power">
+          <data type="integer"/>
+        </element>
+        <element name="Weight">
+          <data type="integer"/>
+        </element>
+      </element>
+    </element>
+  </start>
+</grammar>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ <ArrayOfMotorcycle xmlns="http://schemas.datacontract.org/2004/07/MotoApi.Models">
+    <Motorcycle>
+        <Make>Yamaha</Make>
+        <Name>R3</Name>
+        <Type>Racing bike</Type>
+        <Power>300</Power>
+        <Weight>160</Weight>
+    </Motorcycle>
+</ArrayOfMotorcycle>

@@ -1,0 +1,12 @@
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.exe
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.deps.json
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.runtimeconfig.json
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.runtimeconfig.dev.json
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.dll
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\bin\Debug\netcoreapp3.1\MotoClient.pdb
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.csproj.CoreCompileInputs.cache
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.AssemblyInfoInputs.cache
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.AssemblyInfo.cs
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.dll
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.pdb
+C:\Users\pasar\Desktop\IIS-API\MotoClient\MotoClient\obj\Debug\netcoreapp3.1\MotoClient.genruntimeconfig.cache
